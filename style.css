@@ -1,6 +1,125 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&family=Poppins:wght@100;200;300;400&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  width: 100wh;
+  height: 100vh;
+  background-image: url(./images/blob-scene-haikei.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 950px;
+  gap: 40px;
+  align-items: center;
+  justify-items: center;
+  margin: auto;
+}
+.container .card {
+  background: linear-gradient(-135deg, #f24daa, #2114c9);
+  width: 240px;
+  height: 200px;
+  padding: 20px 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  text-align: center;
+}
+.container .card:hover {
+  height: 360px;
+  border-radius: 5px;
+}
+.container .card .card-header img {
+  position: relative;
+  border-radius: 50%;
+  display: block;
+  width: 160px;
+  height: 160px;
+  border: 1px solid white;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s ease;
+  margin: auto;
+}
+.container .card .card-icons {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin: 20px;
+}
+.container .card .card-icons a {
+  color: white;
+  font-size: 20px;
+  margin: 0px 5px;
+  text-align: center;
+}
+.container .card .card-content .info {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: white;
+}
+.container .card .card-content .position {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  color: white;
+  padding-top: 10px;
+}
+
+/* responsive*/
+@media only screen and (max-width: 320px) {
+  .container {
+    grid-template-columns: 1fr;
+    width: 200px;
+    gap: 10px;
+  }
+  .container .card {
+    width: 120px;
+    height: 120px;
+    padding: 10px 10px;
+  }
+  .container .card:hover {
+    height: 260px;
+  }
+  .container .card .card-header img {
+    width: 100px;
+    height: 100px;
+  }
+  .container .card .card-icons {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 10px;
+  }
+  .container .card .card-icons a {
+    color: white;
+    font-size: 18px;
+    margin: 0px 5px;
+    text-align: center;
+  }
+  .container .card .card-content .info {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+  }
+  .container .card .card-content .position {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    color: white;
+    padding-top: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

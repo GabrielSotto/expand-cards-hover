@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&family=Poppins:wght@100;200;300;400&display=swap');
 
 * {
     margin: 0;
@@ -7,6 +7,151 @@
 }
 
 $font-Poppins: 'Poppins', sans-serif;
-$font-size1: 25px;
-$font-size2:18px;
-$color: white;
+$font-Montserrat: 'Montserrat', sans-serif;
+$size1: 25px;
+$size2: 20px;
+$color1: white;
+
+body {
+    width: 100wh;
+    height: 100vh;
+    background-image: url(./images/blob-scene-haikei.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 950px;
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+
+    .card {
+        background: linear-gradient(-135deg, #f24daa, #2114c9);
+        ;
+        width: 240px;
+        height: 200px;
+        padding: 20px 20px;
+        overflow: hidden;
+        border-radius: 5px;
+        transition: all .4s ease-in-out;
+        text-align: center;
+
+        &:hover {
+            height: 360px;
+            border-radius: 5px;
+        }
+
+        .card-header {
+            img {
+                position: relative;
+                border-radius: 50%;
+                display: block;
+                width: 160px;
+                height: 160px;
+                border: 1px solid white;
+                object-fit: cover;
+                transition: all .3s ease;
+                margin: auto;
+            }
+        }
+
+        .card-icons {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            margin: 20px;
+
+            a {
+                color: $color1;
+                font-size: $size2;
+                margin: 0px 5px;
+                text-align: center;
+            }
+        }
+
+        .card-content {
+            .info{
+                font-family: $font-Montserrat;
+                font-size: $size1;
+                font-weight: 400;
+                color: $color1;
+            }
+
+            .position{
+                font-family: $font-Poppins;
+                font-size: $size2;
+                font-weight: 200;
+                color: $color1;
+                padding-top: 10px;
+            }
+        }
+    }
+}
+
+/* responsive*/
+
+@media only screen and (max-width: 320px) {
+    .container{
+        grid-template-columns: 1fr;
+        width: 200px;
+        gap: 10px;
+    
+        .card {
+            width: 120px;
+            height: 120px;
+            padding: 10px 10px;
+    
+            &:hover {
+                height: 260px;
+            }
+    
+            .card-header {
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+    
+            .card-icons {
+                display: flex;
+                position: relative;
+                justify-content: center;
+                margin: 10px;
+    
+                a {
+                    color: $color1;
+                    font-size: 18px;
+                    margin: 0px 5px;
+                    text-align: center;
+                }
+            }
+    
+            .card-content {
+                .info{
+                    font-family: $font-Montserrat;
+                    font-size: $size2;
+                    font-weight: 400;
+                    color: $color1;
+                }
+    
+                .position{
+                    font-family: $font-Poppins;
+                    font-size: $size2;
+                    font-weight: 200;
+                    color: $color1;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+
+}
+
